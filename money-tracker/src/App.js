@@ -9,7 +9,7 @@ function App() {
   function addNewTransaction(ev){
     ev.preventDefault();
     const url = process.env.REACT_APP_API_URL;
-   fetch("http://localhost:3003/api",  {
+   fetch((url),  {
     method: 'POST',
     headers: {'Content-type':'application/json'},
     body: JSON.stringify( {name, description, datetime })
